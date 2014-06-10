@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamic CDN JS Test</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/assets-dynamic-cdn.js"></script>
+  </head>
+  <body ng-app="assets">
+    <div ng-controller="Controller">
+	  <input ng-model="greeting" type="text"><br>
+	  No filter: {{greeting}}<br>
+	  Dynamic CDN PATH: {{greeting|dynamicCDN:['https://example1.com/', 'https://example2.com/', 'https://example3.com', 'https://example4.com/']}}<br>
+	</div>
+  </body>
+</html>
